@@ -4,12 +4,14 @@
 ###              Type "custom" if you want a custom avatar.
 ###
 
+
 def jeff():
     hatStyles('both')
     face('True', '0')
     torso('=', 2)
     legs(2, '#HHH#')
     return()
+
 
 def adam():
     hatStyles('right')
@@ -18,7 +20,8 @@ def adam():
     torso('T', 3)
     legs(3, '<|||>')
     return()
-    
+
+
 def chris():
     hatStyles('front')
     face('True', 'U')
@@ -26,7 +29,8 @@ def chris():
     torso('W', 1)
     legs(4, '<>-<>')
     return()
-    
+
+
 def hatStyles(hatStyle):
 # Prints out certain hatstyles based on user input
     print('')
@@ -47,6 +51,7 @@ def hatStyles(hatStyle):
      /-~-~-\     
     /_______\    ''')
 
+
 def face(hair, eyeCharacter):
 # Prints a basic face, changing with hair and eye character inputs
     if hair == 'True':
@@ -58,6 +63,7 @@ def face(hair, eyeCharacter):
     print('    |  ~~~  |')
     print('     \_____/')
 
+
 def torso(armCharacter, torsoLength):
 # Prints arms and torso, changing with arm character and torso length inputs
     print(' 0{0}{0}{0}{0}|---|{0}{0}{0}{0}0'.format(armCharacter))
@@ -65,26 +71,23 @@ def torso(armCharacter, torsoLength):
         print('      |-X-|')
         torsoLength -= 1
     print('      HHHHH')
-
+    
+    
 def legs(legLength, shoe):
 # Prints out legs, changing with legLength and shoe inputs
     while legLength != 0:
-        #while 
         if legLength >= 1:
-            print('     /// \\\\\\') # 5 blank
+            print('     /// \\\\\\')
         if legLength >= 2:
-            print('    ///   \\\\\\') # 4 blank
+            print('    ///   \\\\\\')
         if legLength >= 3:
-            print('   ///     \\\\\\') 
+            print('   ///     \\\\\\')
         if legLength == 4:
             print('  ///       \\\\\\')
         legLength = 0
     print('{0}       {0}'.format(shoe))
     
-def legs(legLength, shoe):
-    while legLength != 0:
-        print(' ')
-
+    
 def customPrint():
 # Asks all questions and assigns them to variables which are used as parameters for each function.
     hatStyle = input('Hat style ? \n')
@@ -120,5 +123,6 @@ def main():
     elif character.lower() == 'custom':
         print('Answer the following questions to create a custom avatar')
         customPrint()
-
+        
+        
 main()
